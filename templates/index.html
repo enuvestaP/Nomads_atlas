@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NOMADS' ATLAS'</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <!-- Add any additional JavaScript files or libraries you may need -->
+   
+    <style>
+    /* Set box-sizing to border-box for all elements */
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Body */
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('/static/background.jpg');
+      background-repeat: repeat;
+      background-size: cover;
+    }
+    .block
+    {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 150px; /* 16:9 aspect ratio */
+      max-width: 100%;
+      max-height: 100vh;
+      display: flex;
+    }
+    /* Main container */
+    .main-container {
+      position: fixed;
+      top: 150px;
+      left: 0;
+      width: 100vw;
+      height: 40vw; /* 16:9 aspect ratio */
+      max-width: 100%;
+      max-height: 100vh;
+      display: flex;
+    }
+
+    /* Left side */
+    #left-side {
+      width: 30%;
+      height: 100%;
+    }
+
+
+    /* UI container */
+    #ui {
+      width: 40%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Generated image container */
+    #generated-image-container {
+      width: 80%;
+      height: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Top slider */
+    .top-slider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 30%;
+    }
+
+    /* Left slider */
+    .left-slider {
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      transform: translate(-50%, -50%) rotate(-90deg);
+      writing-mode: vertical-lr;
+      width: calc(30% - 40px);
+    }
+
+    /* Right slider */
+    .right-slider {
+      position: absolute;
+      top: 50%;
+      right: 25%;
+      transform: translate(50%, -50%) rotate(-90deg);
+      writing-mode: vertical-lr;
+      width: calc(30% - 40px);
+    }
+
+    /* Bottom slider */
+    .bottom-slider {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 30%;
+    }
+
+    /* Styling for all sliders */
+    .slider {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Style the generated image */
+    #generated-image {
+      width: 100%;
+    }
+
+    /* Right side */
+    #right-side {
+      width: 30%;
+      height: 100%;
+    }
+
+    </style>
+
+</head>
+
+<body>
+  <div id="block"></div>
+    <div class="main-container">
+        <div id="left-side">
+            <img src="" alt="left">
+        </div>
+      
+        <div id="ui">
+            <div id="generated-image-container">
+                <img id="generated-image" src="" alt="Generated Image">
+            </div>
+        
+            <div class="top-slider">
+                <input type="range" class="slider" id="slider1" min="0" max="5" step="1">
+            </div>
+        
+            <div class="left-slider">
+                <input type="range" class="slider" id="slider2" min="0" max="5" step="1">
+            </div>
+        
+            <div class="right-slider">
+                <input type="range" class="slider" id="slider3" min="0" max="5" step="1">
+            </div>
+        
+            <div class="bottom-slider">
+                 <input type="range" class="slider" id="slider4" min="0" max="5" step="1">
+            </div>
+        </div>
+        <div id="right-side">
+        <img src="" alt="right">
+        </div>
+    </div>
+
+    <!-- Add any additional HTML elements or interactive components as needed -->
+
+</body>
+</html>
