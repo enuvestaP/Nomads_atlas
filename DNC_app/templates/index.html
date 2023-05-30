@@ -7,7 +7,7 @@
     <!-- Add any additional JavaScript files or libraries you may need -->
    
     <style>
-      body {
+body {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +19,7 @@
 
 h1 {
   margin-top: 50px;
-  color: grey;
+  color: darkslategrey;
 }
 
 #generated-images {
@@ -43,6 +43,8 @@ h1 {
   flex-direction: column;
   align-items: center;
   margin-top: 50px;
+  max-width: 100%;
+  padding: 0 10px;
 }
 
 .slider-container label {
@@ -63,43 +65,30 @@ h1 {
 }
 
 /* Media Queries */
-
-/* Styles for mobile */
-@media screen and (max-width: 767px) {
-  .slider-container {
-    max-width: 90vw;
+@media screen and (min-width: 768px) {
+  /* Styles for desktop */
+  body {
+    flex-direction: row;
   }
-  
+
+  #generated-images {
+    width: 50vw;
+    height: 50vw;
+    max-width: 500px;
+    max-height: 500px;
+    margin-top: 0;
+  }
+
+  .slider-container {
+    max-width: calc(50vw - 20px); /* Adjust the width as needed based on the desired spacing */
+    margin-top: 0;
+    margin-left: 20px; /* Adjust the left margin as needed based on the desired spacing */
+    padding: 0;
+    align-items: flex-start;
+  }
+
   .slider-container label {
     width: 100%;
-  }
-  
-  .slider-container input[type="range"] {
-    margin-left: 0;
-  }
-}
-
-/* Styles for desktop */
-@media screen and (min-width: 768px) {
-  .slider-container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 800px;
-  }
-  
-  .slider-container label {
-    width: auto;
-    margin-right: 10px;
-  }
-  
-  #generated-images {
-    flex-direction: row;
-  }
-  
-  #generated-image {
-    max-width: 50%;
-    max-height: 500px;
   }
 }
 
@@ -109,7 +98,7 @@ h1 {
 <body>
     <h1>DIGITAL NOMADS' ATLAS</h1>
 
-    <div id="generated-images">
+    <div id="#generated-images">
         <img id="generated-image" src="" alt="Generated Image">
     </div>
 
