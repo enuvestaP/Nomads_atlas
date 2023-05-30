@@ -6,6 +6,15 @@ document.addEventListener("DOMContentLoaded", function () {
   var slider3 = document.getElementById("slider3");
   var slider4 = document.getElementById("slider4");
 
+  // Set the initial values for the sliders
+  slider1.value = 0;
+  slider2.value = 0;
+  slider3.value = 5;
+  slider4.value = 0;
+
+  // Load the initial generated image on page load
+  sendAjaxRequest();
+
   // Add event listeners to the sliders
   slider1.addEventListener("input", handleSliderChange);
   slider2.addEventListener("input", handleSliderChange);
@@ -69,3 +78,4 @@ function handleSliderChange() {
   // Perform any necessary calculations or actions based on the slider values
   // You can update the generated image or perform other operations here
 }
+
