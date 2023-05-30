@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>StyleGAN Latent Space Exploration</title>
+    <title>DIGITAL NOMADS' ATLAS</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
     <!-- Add any additional JavaScript files or libraries you may need -->
@@ -49,13 +49,11 @@
             justify-content: space-between;
             align-items: center;
             width: 100%;
-            max-width: 500px; /* Updated width */
             margin-bottom: 10px;
         }
         
         .slider-container input[type="range"] {
             width: 100%;
-            max-width: 500px; /* Updated width */
             margin-left: 10px;
         }
         
@@ -87,22 +85,22 @@
 
     <div class="slider-container">
         <label for="slider4">
-          <img src="{{ url_for('static', filename='Q_Home.phg') }}" alt="Image 1">
+          <img src="{{ url_for('static', filename='Q_Home.png') }}" alt="Image 1" width="100%">
         </label>
         <input type="range" id="slider4" min="0" max="5" step="1">
 
         <label for="slider2">
-          <img src="{{ url_for('static', filename='Q_dynamic.png') }}" alt="Image 1">
+          <img src="{{ url_for('static', filename='Q_dynamic.png') }}" alt="Image 1" width="100%">
         </label>
         <input type="range" id="slider2" min="5" max="0" step="1">
 
         <label for="slider3">
-          <img src="{{ url_for('static', filename='Q_Consumerism.png') }}" alt="Image 1">
+          <img src="{{ url_for('static', filename='Q_Consumerism.png') }}" alt="Image 1" width="100%">
         </label>
         <input type="range" id="slider3" min="0" max="5" step="1">
         
         <label for="slider1">
-          <img src="{{ url_for('static', filename='Q_mindfulness.png') }}" alt="Image 1">
+          <img src="{{ url_for('static', filename='Q_mindfulness.png') }}" alt="Image 1" width="100%">
         </label>
         <input type="range" id="slider1" min="0" max="5" step="1">
         
