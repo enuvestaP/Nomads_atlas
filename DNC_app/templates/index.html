@@ -7,120 +7,94 @@
     <!-- Add any additional JavaScript files or libraries you may need -->
    
     <style>
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background-image: url("{{ url_for('static', filename='background.jpg') }}");
-  background-repeat: repeat;
-  background-size: cover;
-}
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
 
-h1 {
-  margin-top: 50px;
-}
-
-#content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 50px;
-}
-
-#generated-images {
-  width: 90vw;
-  max-width: 500px;
-  height: 90vw;
-  max-height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-}
-
-#generated-image {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.slider-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 50px;
-}
-
-.slider-container label {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.slider-container input[type="range"] {
-  width: 100%;
-  margin-left: 10px;
-}
-
-.submit-button {
-  margin-top: 20px;
-}
-
-/* Media Queries */
-@media screen and (min-width: 768px) {
-  /* Styles for desktop */
-  body {
-    flex-direction: row;
-  }
-
-  h1 {
-    margin-top: 0;
-    margin-right: 20px;
-    color: darkgrey;
-  }
-
-  #content {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    margin-top: 0;
-  }
-
-  #generated-images {
-    width: 50vw;
-    height: 50vw;
-    max-width: 500px;
-    max-height: 500px;
-    margin-top: 0;
-  }
-
-  .slider-container {
-    max-width: calc(50vw - 20px); /* Adjust the width as needed based on the desired spacing */
-    margin-top: 0;
-    padding: 0;
-    align-items: flex-start;
-  }
-
-  .slider-container label {
-    width: 100%;
-  }
-}
-
-/* Additional Media Query for Mobile */
-@media screen and (max-width: 767px) {
-  /* Styles for mobile */
-  #generated-images {
-    margin-top: 20px; /* Add some margin at the top for spacing */
-  }
-
-  .slider-container {
-    margin-top: 30px; /* Adjust the top margin as needed for spacing */
-  }
-}
-
+      }
+    
+      h1 {
+        margin-top: 50px;
+      }
+    
+      #generated-images {
+        width: 90vw;
+        max-width: 500px;
+        height: 90vw;
+        max-height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+      }
+    
+      #generated-image {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    
+      .slider-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+        width: 90vw;
+        max-width: 500px;
+        height: calc(100vh - 300px); /* Adjust the value to leave space for other elements */
+        overflow-y: auto; /* Add scroll if content exceeds container height */
+      }
+    
+      .slider-container label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    
+      .slider-container input[type="range"] {
+        width: 100%;
+        margin-left: 10px;
+      }
+    
+      .submit-button {
+        margin-top: 20px;
+      }
+    
+      /* Media Queries */
+      @media screen and (min-width: 768px) {
+        /* Styles for desktop */
+        body {
+          align-items: flex-start; /* Align elements to the top of the screen */
+          flex-direction: row;
+        }
+    
+        h1 {
+          margin-top: 0;
+          margin-left: 50px;
+        }
+    
+        #generated-images {
+          width: 500px;
+          height: 500px;
+          margin-top: 0;
+        }
+    
+        .slider-container {
+          margin-top: 0;
+          margin-left: 50px;
+          height: 500px;
+          overflow-y: visible;
+        }
+    
+        .slider-container label {
+          width: 300px;
+        }
+      }
     </style>
+    
 </head>
 
 <body>
@@ -145,7 +119,7 @@ h1 {
         <label for="slider3">
           <img src="{{ url_for('static', filename='Q_Consumerism.png') }}" alt="Image 1" width="100%">
         </label>
-        <input type="range" id="slider3" min="5" max="0" step="1">
+        <input type="range" id="slider3" min="0" max="5" step="1">
         
         <label for="slider1">
           <img src="{{ url_for('static', filename='Q_mindfulness.png') }}" alt="Image 1" width="100%">

@@ -15,7 +15,7 @@ def generate_images():
     # Generate the file name based on the slider values
     x_value = ((slider1_val / 5) * 2) - 1
     y_value = ((slider2_val / 5) * 2) - 1
-    z_value = ((slider3_val / 5) * 2) - 1
+    z_value = ((5 - slider3_val) / 5 * 2) - 1
     t_value = ((slider4_val / 5) * 2) - 1
     filename = f'x{x_value:.2f}_y{y_value:.2f}_z{z_value:.2f}_t{t_value:.2f}.png'
 
